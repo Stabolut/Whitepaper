@@ -1,0 +1,81 @@
+%----------------------------------------------------------------------------------------
+% Literature review
+%----------------------------------------------------------------------------------------
+
+\section{USB Design}
+\subsection{How USB is Pegged to the USD Value}
+USB is designed to maintain a stable price of 1 US dollar.
+To achieve this, USB is pegged to the USD value through a unique method. Instead of being backed by fiat currency, USB is backed by a basket of crypto assets.\newline
+USB's price stability is maintained through a mechanism called "shorting crypto assets." This involves selling inverse perpetual swaps in order to generate the necessary collateral for USB.\newline
+The USB token is minted when crypto assets are received, and is then burned when it is redeemed. 
+This ensures that the value of USB always reflects the value of the underlying crypto assets, which are constantly monitored and audited in real-time to ensure transparency and trust.\newline
+By using crypto assets as collateral, USB avoids the regulatory and centralization issues that come with fiat-backed stablecoins.
+It also provides users with increased privacy and security, as there are no bank accounts or financial intermediaries involved in the process.\newline
+In the next section, we will discuss the advantages of USB over other stablecoins in more detail.
+
+\subsection{Use of Inverse Perpetual Swaps for Hedging}
+
+To ensure the stability of USB's value, Stabolut utilizes a unique hedging mechanism using inverse perpetual swaps.
+In this process, Stabolut shorts crypto assets through the use of a perpetual swap that mimics the price of the asset, effectively creating a synthetic short position.\newline
+When someone purchases USB, Stabolut simultaneously shorts a crypto asset with the same value as the purchased USB.
+If the price of the crypto asset rises, the value of USB falls and the value of the short position increases, thus stabilizing the USB price.
+Conversely, if the price of the crypto asset drops, the value of USB rises, and the value of the short position decreases, again stabilizing the USB price.\newline
+This approach provides an innovative solution to the problem of centralized control and manipulation of stablecoins.
+USB is completely decentralized and operates on the principles of the underlying blockchain network, ensuring that the value of the stablecoin is tied to the market's supply and demand dynamics.\newline
+In addition, this hedging mechanism eliminates the need for traditional banks or other intermediaries, which can result in significant cost savings for USB holders.
+\newline
+\textit{In our 2024 backtesting, the hedging strategy for ETH/USD funding rates generated an annualized yield of 60\%. When combined with the BTC/USD hedging strategy—which alone produced a yield of 16\% throughout 2024—this innovative approach significantly enhances the overall stability and income-generating profile of USB. It is important to note that past performance is not indicative of future results, and these figures should not be considered a guarantee of future returns.} 
+
+
+\subsection{Basket of Centralized Exchanges for Custodial Storage}
+To ensure the assets backing USB remain secure and easily accessible, we use a basket of centralized exchanges for custodial storage.
+These exchanges are carefully selected based on their reputation, security measures, and regulatory compliance.\newline
+The assets backing USB are stored across multiple exchanges, reducing the risk of any single point of failure or hacking.
+This approach also enables us to take advantage of the best funding rates available on each exchange, ensuring that USB is always fully backed and maintaining its peg to the US dollar.\newline
+In the future, we plan to explore the use of decentralized exchanges to further increase the security and decentralization of the custodial storage of USB's underlying assets. 
+This will make USB even more resilient and robust as a stablecoin, reducing counterparty risk.
+
+\subsection{Algorithm for Tracking USB Token Issuance and Redemption}
+To ensure that the assets backing USB always match the total number of USB tokens in circulation, Stabolut has designed a sophisticated algorithm that continuously tracks token issuance and redemption.\newline
+Whenever a user requests to mint new USB tokens, the algorithm automatically checks the amount of crypto assets held in the hedging mechanism and calculates the equivalent value in US dollars.
+The algorithm then mints the exact amount of USB tokens requested and sends them to the user's wallet.\newline
+On the other hand, when a user requests to redeem USB tokens, the algorithm checks the user's wallet and burns the equivalent amount of USB tokens.
+The algorithm then releases the corresponding amount of crypto assets from the hedging mechanism and sends it to the user's wallet.\newline
+This process is entirely automated and transparent, ensuring that the value of USB tokens always matches the value of the assets backing them. 
+The use of a highly sophisticated algorithm also ensures that the process is quick, efficient, and secure for all users.\newline
+
+\section{Mathematical Framework for SBL Value Accrual}
+
+\subsection{Treasury Growth and Surplus Calculation}
+The Stabolut treasury is the primary engine of value creation for the SBL token. Its growth is a function of the yield generated from the protocol's hedging strategies.
+
+\begin{equation}
+\text{Treasury Growth} = \sum (\text{Yield from Hedging Strategy}) - \text{Operational Expenses}
+\end{equation}
+
+The treasury surplus is the amount of funds available for distribution to SBL holders. It is calculated as follows:
+
+\begin{equation}
+\text{Treasury Surplus} = \text{Total Treasury Assets} - (0.5 \times \text{Circulating USB Supply}) - \text{Operational Reserve}
+\end{equation}
+
+\subsection{Progressive Staking Rewards}
+The rewards for progressive staking are calculated based on the user's staked SBL amount and their staking tier multiplier.
+
+\begin{equation}
+\text{User Reward} = (\frac{\text{User's Staked SBL} \times \text{Tier Multiplier}}{\sum (\text{All Staked SBL} \times \text{Tier Multipliers})}) \times \text{Total Reward Pool}
+\end{equation}
+
+\subsection{Buyback and Burn Impact on SBL Value}
+The buyback and burn mechanism has a direct impact on the value of SBL by reducing its circulating supply. The theoretical price impact can be modeled as follows:
+
+\begin{equation}
+\text{New SBL Price} = \frac{\text{SBL Market Cap}}{\text{Circulating Supply} - \text{Tokens Burned}}
+\end{equation}
+
+\subsection{SBL Valuation Model}
+The total value of the SBL token can be conceptualized as the sum of its base utility value, the net present value (NPV) of its future revenue share, the NPV of its future treasury surplus distributions, and a scarcity premium derived from the buyback and burn program.
+
+\begin{equation}
+\text{SBL Value} = \text{Base Utility} + \text{NPV(Revenue Share)} + \text{NPV(Surplus Distributions)} + \text{Scarcity Premium}
+\end{equation}

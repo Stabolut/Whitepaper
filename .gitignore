@@ -1,0 +1,19 @@
+# LaTeX intermediate files
+*.aux
+*.log
+*.toc
+*.out
+*.synctex.gz
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+
+# PDF output files
+*.pdf
+
+# OS-specific files
+.DS_Store
+
+# Environment files
+.env

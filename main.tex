@@ -1,0 +1,98 @@
+% Credits are indicated where needed. The general idea is based on a template by Vel (vel@LaTeXTemplates.com) and Frits Wenneker.
+
+\documentclass[11pt, a4paper]{article} % General settings in the beginning (defines the document class of your paper)
+% 11pt = is the font size
+% A4 is the paper size
+% “article” is your document class
+
+\input{general.tex} % Loads required packages from the separate file 
+
+%---------------------------------------------------------------------------------
+%	General information
+%---------------------------------------------------------------------------------
+\title{
+\begin{figure}[h] % Defines figure environment
+    \centering % Centers your figure
+\includegraphics[scale=0.1]{figure/usblogo.png} % Includes your figure and defines the size
+   % \caption{A circle} % For your caption
+   % \label{fig:my_label} % If you want to label your figure for in-text references
+\end{figure}
+} % Adds your title
+\author{
+%FIRSTNAME LASTNAME % Add your first and last name
+    %\thanks{} % Adds a footnote to your title
+     \textit{www.stabolut.com} % Adds your institution
+  }
+\date{Version 0.7.2, \today} % Adds the version and the current date to your “cover” page
+
+%---------------------------------------------------------------------------------
+%	Define what’s in your document
+%---------------------------------------------------------------------------------
+\begin{document}
+\maketitle % Print your title, author name and date;
+
+\begin{abstract}
+Stablecoins, which maintain a stable value, are a popular alternative to traditional cryptocurrencies. However, the most common type, fiat-backed stablecoins, have drawbacks such as centralization, counterparty risk, and lack of transparency.
+
+USB, a crypto-asset-backed stablecoin, is introduced as a solution. It mimics the US dollar's value using a unique mechanism of shorting crypto assets through inverse perpetual swaps. This approach makes USB free from the constraints of traditional fiat-backed stablecoins. Moreover, USB doesn't require bank accounts or other centralized entities, enhancing its decentralization and reducing its susceptibility to regulatory crackdowns or frozen funds.
+
+This whitepaper introduces a revolutionary enhancement to the Stabolut ecosystem: a comprehensive value accrual framework for the SBL governance token. This framework transforms SBL from a simple utility token into a multi-dimensional asset that captures value directly from the protocol's success. Key features include governance-controlled treasury surplus distribution, progressive revenue sharing, deflationary buyback mechanisms, and tiered utility benefits. This positions Stabolut as a leader in next-generation DeFi tokenomics and sustainable protocol design.
+\end{abstract}
+
+\section*{Glossary}
+\begin{description}
+\item[USB] Stabolut's crypto-asset-backed stablecoin, designed to maintain a stable value of 1 USD.
+
+\item[SBL] Stabolut's utility and governance token. SBL holders can participate in governance decisions and receive Treasury Airdrops.
+
+\item[Treasury Airdrop] The periodic distribution of excess funds from the Stabolut treasury to SBL token holders.  These airdrops are funded by profits generated from the funding rates of the Inverse Perpetual Swaps.
+
+\item[Inverse Perpetual Swap] A type of derivative contract that allows Stabolut to hedge against the price volatility of crypto assets.  Unlike traditional futures contracts, perpetual swaps have no expiration date.  The "inverse" nature means the contract's value increases when the crypto asset's price *decreases*, and vice-versa. This is key to maintaining USB's 1 USD peg.
+
+\item[Hedging] A strategy used to reduce the risk of price fluctuations of an asset. In Stabolut's case, hedging involves using Inverse Perpetual Swaps to offset the risk of price changes in crypto assets.
+
+\item[Funding Rate] A periodic payment either to or from traders holding long or short positions in a perpetual swap contract.  The funding rate is used to keep the perpetual swap price close to the spot price of the underlying asset.  Stabolut *receives* funding payments because it holds a *short* position.
+
+\item[Short Position] A financial position that profits when the price of an asset *decreases*.  Stabolut opens a short position in Inverse Perpetual Swaps as part of its hedging strategy.
+
+\item[Long Position] A financial position that profits when the price of an asset *increases*.  In the perpetual swap market, traders holding long positions typically pay funding to those holding short positions during bull markets.
+
+\item[Crypto/USD Perpetual Swap] A common ticker symbol for a crypto asset/US Dollar perpetual swap contract on cryptocurrency derivatives exchanges.
+
+\item[Centralized Exchange (CEX)] A cryptocurrency exchange operated by a central company, which holds custody of users' funds.  Stabolut uses a basket of CEXs to hold the crypto assets backing USB.
+
+\item[Decentralized Exchange (DEX)] A cryptocurrency exchange that operates without a central authority, allowing users to trade directly with each other using smart contracts.  Stabolut plans to integrate with DEXs in the future.
+
+\item[Collateral] An asset used to secure a loan or, in this case, to back the value of a stablecoin.  USB uses crypto assets as collateral.
+
+\item[Minting] The process of creating new USB tokens.  This occurs when users deposit crypto assets into the Stabolut protocol.
+
+\item[Burning] The process of destroying USB tokens.  This occurs when users redeem USB for the underlying crypto asset collateral.
+
+\item[Arbitrum] A Layer 2 scaling solution for Ethereum, used by Stabolut to process USB transactions with lower fees and faster confirmation times.
+
+\item[Spot Price] The current market price of an asset for immediate delivery.
+
+\item[Crypto/USD Spot Price Feed] A mechanism that provides the real-time price of a crypto asset in US dollars, used by Stabolut to determine the value of the collateral backing USB. It's a weighted average from multiple data sources (exchanges).
+
+\item[Counterparty Risk] The risk that the other party in a financial contract (e.g., a centralized exchange) will default or fail to meet their obligations.
+
+\item[KYC (Know Your Customer)] Regulations that require financial institutions to verify the identity of their customers. USB does not require KYC for transactions, enhancing user privacy.
+
+\item[Liquidity] The ease with which an asset can be bought or sold without significantly affecting its price. High liquidity is important for stablecoins to maintain their peg.
+
+\item[Governance] The process of making decisions about the future direction of a protocol or project. SBL token holders participate in the governance of Stabolut.
+
+\item [Stablecoin] A type of cryptocurrency that is designed to maintain a stable value, usually by being pegged to a reserve asset such as the US dollar.
+\end{description}
+
+\input{content/toc} % Adds a table of content; 
+\input{content/introduction} % Adds your introduction
+\input{content/chapter2} % Adds your Chapter 2
+\input{content/chapter3} % Adds your Chapter 3 
+\input{content/chapter4} % Adds your Chapter 4
+\input{content/chapter5} % Adds your Chapter 5
+\input{content/chapter6} 
+\input{content/conclusion} % Adds your conclusion
+%--------------------------------------------------------------------------------
+\end{document}
