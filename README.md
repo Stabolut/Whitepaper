@@ -2,6 +2,10 @@
 
 This repository contains the LaTeX source code for the Stabolut Whitepaper.
 
+## Latest Version
+
+The latest version of the whitepaper is [Stabolut_WP_0_7_2.pdf](./Stabolut_WP_0_7_2.pdf).
+
 ## Abstract
 
 Stablecoins, which maintain a stable value, are a popular alternative to traditional cryptocurrencies. However, the most common type, fiat-backed stablecoins, have drawbacks such as centralization, counterparty risk, and lack of transparency.
