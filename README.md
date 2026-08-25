@@ -1,34 +1,53 @@
-# Stabolut Whitepaper
+# Stabolut Core Whitepaper (USB & SBL)
 
-This repository contains the LaTeX source code for the Stabolut Whitepaper.
+[![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](https://opensource.org/licenses/GPL-3.0)
 
-## Latest Version
+This repository contains the LaTeX source code and latest compiled PDF for the **Stabolut Decentralized Stablecoin Protocol (USB & SBL Tokens)**.
 
-The latest version of the whitepaper is [Stabolut_WP_0_7_2.pdf](./Stabolut_WP_0_7_2.pdf).
+---
 
-## Abstract
+## 📄 Read the Whitepaper
 
-Stablecoins, which maintain a stable value, are a popular alternative to traditional cryptocurrencies. However, the most common type, fiat-backed stablecoins, have drawbacks such as centralization, counterparty risk, and lack of transparency.
+- 📥 **[Download Latest Compiled PDF (Stabolut_WP_0_7_2.pdf)](./Stabolut_WP_0_7_2.pdf)**
 
-USB, a crypto-asset-backed stablecoin, is introduced as a solution. It mimics the US dollar's value using a unique mechanism of shorting crypto assets through inverse perpetual swaps. This approach makes USB free from the constraints of traditional fiat-backed stablecoins. Moreover, USB doesn't require bank accounts or other centralized entities, enhancing its decentralization and reducing its susceptibility to regulatory crackdowns or frozen funds.
+---
 
-This whitepaper introduces a revolutionary enhancement to the Stabolut ecosystem: a comprehensive value accrual framework for the SBL governance token. This framework transforms SBL from a simple utility token into a multi-dimensional asset that captures value directly from the protocol's success. Key features include governance-controlled treasury surplus distribution, progressive revenue sharing, deflationary buyback mechanisms, and tiered utility benefits. This positions Stabolut as a leader in next-generation DeFi tokenomics and sustainable protocol design.
+## 💡 Abstract
 
-## Compiling the PDF
+Stablecoins that maintain a stable value are essential for the digital economy. However, fiat-backed stablecoins suffer from central points of failure, counterparty risks, and regulatory freeze risks.
 
-To compile the whitepaper into a PDF, you will need a LaTeX distribution (such as TeX Live, MiKTeX, or MacTeX). Once installed, you can compile the `main.tex` file.
+**USB** is a decentralized, crypto-asset-backed stablecoin that maintains its peg to the US Dollar using a unique mechanism of shorting crypto assets through inverse perpetual swaps (delta-neutral hedging). USB operates without custodial bank accounts, significantly enhancing decentralization and resilience.
 
+The **SBL Governance Token** implements a value-accrual tokenomics model capturing protocol surplus, revenue sharing, deflationary buybacks, and tiered staking rewards.
+
+---
+
+## 🛠️ Compiling from Source
+
+To compile the LaTeX source into a PDF:
+
+### Prerequisites
+Install a TeX distribution:
+- **macOS**: MacTeX (`brew install --cask mactex`)
+- **Ubuntu/Debian**: `sudo apt install texlive-full`
+- **Windows**: [MiKTeX](https://miktex.org/) or TeX Live
+
+### Build Command
 ```bash
 pdflatex main.tex
 ```
 
-## Project Structure
+---
 
-- `main.tex`: The main LaTeX file.
-- `general.tex`: Contains package imports and general settings.
-- `content/`: Contains the individual chapters of the whitepaper.
-- `figure/`: Contains the figures used in the whitepaper.
+## 📂 Repository Structure
 
-## Contributing
+- `main.tex`: Master document configuration.
+- `general.tex`: Packages and formatting rules.
+- `content/`: Individual chapter source files.
+- `figure/`: Flowcharts, diagrams, and asset images.
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+---
+
+## 📄 License
+
+This repository is licensed under the **GNU General Public License v3.0** - see [LICENSE](LICENSE) for details.
